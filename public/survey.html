@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder Survey</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Friend Finder Survey</h1>
+      <h3>Fill out this completely and we will suggest a friend for you.</h3>
+      <hr>
+    </div>
+
+    <h4>Name (Required)</h4>
+    <input type="text" id="name" class="form-control" required="">
+    <h4>Link to Photo Image (Required)</h4>
+    <input type="text" id="photo" class="form-control" required="">    
+  </divbr>
+    <!---------------------------------------- QUESTION 1 ------------------------------------------------------------------>
+    <h3>1. Introvert vs Extrovert</h3>
+    <p>Mark 5 if you are mostly an introvert and 1 if you are mostly an extrovert.</p>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q1" id="A1" value="1">
+        <label class="form-check-label" for="A1">
+          1- Strong Introvert
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q1" id="A2" value="2">
+        <label class="form-check-label" for="A2">
+          2- Introvert
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q1" id="A3" value="3">
+        <label class="form-check-label" for="A3">
+          3- A bit of both
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q1" id="A4" value="4">
+        <label class="form-check-label" for="A4">
+          4- Extrovert
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q1" id="A5" value="5">
+        <label class="form-check-label" for="A5">
+          5- Strong Extrovert
+        </label>
+      </div>
+
+    <!---------------------------------------- QUESTION 2 ------------------------------------------------------------------>
+    <h3>2.Sports vs Video Games</h3>
+    <p>Mark 5 if you are mostly into Sports and 1 if you are mostly into Video Games.</p>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q2" id="A1" value="1">
+        <label class="form-check-label" for="A1">
+          1- Video Game Lover
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q2" id="A2" value="2">
+        <label class="form-check-label" for="A2">
+          2- Into Video Games
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q2" id="A3" value="3">
+        <label class="form-check-label" for="A3">
+          3- Into Both
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q2" id="A4" value="4">
+        <label class="form-check-label" for="A4">
+          4- Into Sports
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q2" id="A5" value="5">
+        <label class="form-check-label" for="A5">
+          5- Sports Lover
+        </label>
+      </div>
+
+
+      <!---------------------------------------- QUESTION 3 ------------------------------------------------------------------>
+    <h3>3.Online vs In-Person</h3>
+    <p>Mark 5 if you are mostly into online friendships and 1 if you are looking for in-person friendships.</p>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q3" id="A1" value="1">
+        <label class="form-check-label" for="A1">
+          1- Only In-Person Friendships
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q3" id="A2" value="2">
+        <label class="form-check-label" for="A2">
+          2- Looking for In-Person Friendships
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q3" id="A3" value="3">
+        <label class="form-check-label" for="A3">
+          3- Either is fine.
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q3" id="A4" value="4">
+        <label class="form-check-label" for="A4">
+          4- Looking for online friendships.
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q3" id="A5" value="5">
+        <label class="form-check-label" for="A5">
+          5- Only online friendships
+        </label>
+      </div>
+
+
+
+      
+      <!---------------------------------------- QUESTION 4 ------------------------------------------------------------------>
+    <h3>4.Drugs and Alcohol vs No Drugs and Alcohol</h3>
+    <p>Mark 5 if you are okay with drugs and alcohol and 5 if you are not okay with it.</p>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q4" id="A1" value="1">
+        <label class="form-check-label" for="A1">
+          1- Only want a friend who will do it with me.
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q4" id="A2" value="2">
+        <label class="form-check-label" for="A2">
+          2- It's okay if you don't, but I do like those things.
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q4" id="A3" value="3">
+        <label class="form-check-label" for="A3">
+          3- Could go either way.
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q4" id="A4" value="4">
+        <label class="form-check-label" for="A4">
+          4- It's okay if you do, but I don't.
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Q4" id="A5" value="5">
+        <label class="form-check-label" for="A5">
+          5- No drugs and alchol at all.
+        </label>
+      </div>
+
+
+     <!---------------------------------------- QUESTION 5 ------------------------------------------------------------------>
+     <h3>5. Religious or not religious</h3>
+     <p>Mark 5 if you are religious and 1 if you are not religious.</p>
+     <div class="form-check">
+         <input class="form-check-input" type="radio" name="Q5" id="A1" value="1">
+         <label class="form-check-label" for="A1">
+           1- Not religious and not okay with it.
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="radio" name="Q5" id="A2" value="2">
+         <label class="form-check-label" for="A2">
+           2- Not relgious but okay with it.
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="radio" name="Q5" id="A3" value="3">
+         <label class="form-check-label" for="A3">
+           3- Could go either way.
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="radio" name="Q5" id="A4" value="4">
+         <label class="form-check-label" for="A4">
+           4- Religious, but okay with non-religous people.
+         </label>
+       </div>
+       <div class="form-check">
+         <input class="form-check-input" type="radio" name="Q5" id="A5" value="5">
+         <label class="form-check-label" for="A5">
+           5- Religious and not okay with non-religious people.
+         </label>
+       </div>
+ 
+
+
+
+
+
+
+    <!---------------------------------------- BUTTON ------------------------------------------------------------------>
+       <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+        Submit</button>
+
+
+
+
+    <!---------------------------------------- MODAL ------------------------------------------------------------------>
+        <div id="match-modal" class="modal fade" role ="dialog" style="display:none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h2 class="modal-title"><strong>Best Match</strong></h2>
+                      </div>
+                    <div class="modal-body">
+                        <h2 id="match-name">Jane</h2>
+                        <img id="match-img" src="https://www.google.com/url?sa=i&amp;rct=j&amp;q=&amp;esrc=s&amp;source=images&amp;cd=&amp;ved=2ahUKEwjrquCmn9DkAhUQqp4KHT2rCWwQjRx6BAgBEAQ&amp;url=https%3A%2F%2Fwww.medicalnewstoday.com%2Farticles%2F322868.php&amp;psig=AOvVaw0qXViv0FUVmvBJRgIbYgLt&amp;ust=1568548136916126" alt="">
+                      </div>               
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>                      
+
+
+                </div>
+
+
+
+
+            </div>
+        
+        
+        </div>
+
+
+
+
+
+   </div>
+
+</html>
