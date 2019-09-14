@@ -1,9 +1,9 @@
-
-var friendlist = require("friends.js");
+var friendlist = require(`../data/friends`);
 
 // Displays all possible friends
   app.get("/api/friends", function(req, res) {
-    return res.json(friends);
+    return res.json(friendlist);
+
   });
   
   // Handles incoming survey results and compatibility logic
@@ -18,7 +18,7 @@ app.post("/api/friend", function(req, res) {
   
     console.log(newfriend);
   
-    friendlist.friends.push(newfriend); //add new survey result to the list of friends
+    friendlist.friends.push(req.body); //add new survey result to the list of friends
   
     res.json(newfriend);
   });

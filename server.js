@@ -16,6 +16,13 @@ app.use(express.json());
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
   console.log("Server listening on: http://localhost:" + PORT);
 });
+
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "public/home.html"));
+  });
+  
+  app.get("/survey", function(req, res) {
+    res.sendFile(path.join(__dirname, "public/survey.html"));
+  });
