@@ -1,6 +1,6 @@
 // All Possible Friends (DATA)
 // =============================================================
-var friends = [
+var friendslist = [
   {
     name: "Lotus Example",
     photo: "https://pbs.twimg.com/profile_images1106536739437457409/QIjRmS9_.jpg",
@@ -18,3 +18,5 @@ var friends = [
     ]
   }
 ];
+
+module.exports = friendslist;
