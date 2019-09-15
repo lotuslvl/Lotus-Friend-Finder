@@ -2,7 +2,7 @@
 // =============================================================
 var express = require("express");
 var path = require("path");
-var friendslist = require('./app/data/friends.js');
+var friends = require('./app/data/friends.js');
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -30,20 +30,48 @@ app.get("/", function(req, res) {
 
 	// API Routes
 	app.get('/api/allfriends', function(req, res) {
-		res.json(friendslist);
+		res.json(friends);
 	});
 
 	// Add new friend entry
 	app.post('/api/friends', function(req, res) {
-		// Capture the user input object
-		var completedform = req.body;
-    console.log(completedform);
-		// Add new user to friendslist
-		friendslist.push(completedform);
-    //startonmatch
-    var matchName = '';
-    var matchImage = '';
+
+	// Capture the user input object
+  var userInput = req.body;
+  // console.log('userInput = ' + JSON.stringify(userInput));
+
+  var userResponses = userInput.scores;
+
+
+  // Compute best friend match
+  var matchName = '';
+  var matchImage = '';
+  var totalDifference = 10000; // Make the initial value big for comparison
+
+  // Examine all existing friends in the list
+  for (var i = 0; i < friends.length; i++) {
+    // console.log('friend = ' + JSON.stringify(friends[i]));
+
+    // Compute differenes for each question
+    var diff = 0;
+    for (var j = 0; j < userResponses.length; j++) {
+      diff += Math.abs(friends[i].scores[j] - userResponses[j]);
+    }
+   
+
+    // If lowest difference, record the friend match
+    if (diff < totalDifference) {
+ 
+      totalDifference = diff;
+      matchName = friends[i].name;
+      matchImage = friends[i].photo;
+    }
+  }
+
+  // Add new user
+  friends.push(userInput);
+
+  // Send appropriate response
+  res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
     
-		// Send appropriate response
-		res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
 	});
